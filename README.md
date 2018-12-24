@@ -1,8 +1,8 @@
-#DynoSwift
+# DynoSwift
 
 DynoSwift is a dynamic typing framework in swift, that allows basic types, commonly found in a language like JavaScript, to be used dynamically in Swift. DynoSwift accomplishes this by the use of enums, which have an enormous amount of features and extensability in the Swift language, like methods, initializers, computed attributes, and subscripts.
 
-###Types
+### Types
 
 DynoSwift supports the following types:
 
@@ -15,7 +15,7 @@ DynoSwift supports the following types:
 
 *Note: The list and map types can be nested, they can contain lists of lists or maps of lists.*
 
-##Wrapping and Initialization
+## Wrapping and Initialization
 
 To convert a swift type into a DynoSwift type, you can either initialize it via a constructor method, or put it in the appropiate enum case:
 
@@ -40,7 +40,7 @@ list([DynObject.int(8), DynObject.bool(true)])
 
 Maps can also be done in a similar fashion.
 
-##Extracting Swift Types
+## Extracting Swift Types
 
 To get back a swift type form a `DynObject`, you can use one of the computed variables on the enum. If you use a variable to which the internal type of the DynObject does not correspond to, you will get a `DynObject.null` returned. This union acts as a null reference, and prevents the enum from raising errors. Here are a few examples:
 
@@ -52,7 +52,7 @@ print(a.string)
 //No contained value
 ```
 
-##Mutating Contained Values
+## Mutating Contained Values
 
 For easier functionality, DynObject have methods that facilitate changing the internal value without extracting it back out to a Swift type. Some of these methods are only for int cases, but a number of them work elsewhere, such as the `.plus()` method.
 
@@ -77,10 +77,10 @@ x.mul(DynObject(element:5))
 //string("xxxxxx")
 ```
 
-##Distribution
+## Distribution
 
 DynoSwift will be available on the swift package manager upon the release of Swift 3. Until then, you can just clone the repo from here.
 
-##License
+## License
 
 DynoSwift is MIT licensed and open sourced.
